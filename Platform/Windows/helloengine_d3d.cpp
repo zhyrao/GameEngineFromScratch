@@ -179,7 +179,6 @@ HRESULT CreateGraphicsResources(HWND hWnd)
 												   D3D_FEATURE_LEVEL_9_1};
 		D3D_FEATURE_LEVEL FeatureLevelSupported;
 
-		HRESULT hr = S_OK;
 
 		// create a device, device context and swap chain using the information in the scd struct
 		hr = D3D11CreateDeviceAndSwapChain(NULL,
@@ -240,7 +239,7 @@ void DiscardGraphicsResources()
 void RenderFrame()
 {
 	// clear the back buffer to a deep blue
-	const FLOAT clearColor[] {0.0f, 0.2f, 0.4f, 1.0f};
+	const FLOAT clearColor[] = {0.0f, 0.2f, 0.4f, 1.0f};
 	g_pDevcon->ClearRenderTargetView(g_pRTView, clearColor);
 
 	// do 3D rendering on the back buffer here
