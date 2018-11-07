@@ -382,3 +382,13 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
 
 	return result;
 }
+
+
+// Compiler Tips:
+// 1. First we need to compiler shader files to shader objects
+//		fxc /T vs_5_0 /Zi /Fo copy.vso copy.vs
+//		fxc /T vs_5_0 /Zi /Fo copy.pso copy.ps
+
+// 2. Compile code under this file's directory 
+// 		clang-cl -I./DirectXMath/Inc -c -Z7 -o helloengine_d3d.obj helloengine_d3d.cpp
+// 		link -debug user32.lib d3d11.lib d3dcompiler.lib helloengine_d3d.obj
