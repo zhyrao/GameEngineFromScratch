@@ -33,3 +33,5 @@
 build/
 *.ilk
 *.pdb
+*.pso
+*.vso
